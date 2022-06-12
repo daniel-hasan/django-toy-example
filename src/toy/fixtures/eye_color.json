@@ -1,0 +1,45 @@
+[
+    
+    {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":1,
+          "color_name": "Amber"
+        }
+      },
+      {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":2,
+          "color_name": "Hazel"
+        }
+      },
+      {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":3,
+          "color_name": "Blue"
+        }
+      },
+      {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":4,
+          "color_name": "Green"
+        }
+      },
+      {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":5,
+          "color_name": "Brown"
+        }
+      },
+      {
+        "model": "toy.EyeColor",
+        "fields": {
+          "id":6,
+          "color_name": "Dark Brown"
+        }
+      }
+  ]
