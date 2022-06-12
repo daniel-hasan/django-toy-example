@@ -49,7 +49,7 @@ src
 ├── manage.py
 ```
 
-O problema disso é quando seu models possui muitos arquivos e além disso, muito da lógica e funcionalidades do seu sistema (conforme a apresentada na seção anterior). Assim, uma boa prática é subdividir esses arquivos. 
+O problema disso é quando seu `models.py` possui muitas classes e além disso, muito da lógica e funcionalidades do seu sistema (conforme a apresentada na seção anterior). Assim, uma boa prática é subdividir esse arquivo. 
 
 Uma prática que iremos fazer em nosso projeto é, sempre que há uma classe que possui mais lógica além dos atributos e relacionamentos, iremos retirá-la do arquivo `models.py` e colocarmos em um arquivo separado - igual colocamos a classe  `Person`.
 
