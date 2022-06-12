@@ -95,7 +95,13 @@ class Migration(migrations.Migration):
             name='EyeColor',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('color_name', models.CharField(max_length=50)),
+                ('color_name', models.CharField(choices=[('amber', 'Amber'), 
+                                                        ( 'hazel', 'Hazel'), 
+                                                        ('blue', 'Blue'), 
+                                                        ('green', 'Green'), 
+                                                        ('brown', 'Brown'), 
+                                                        ('dark-brown', 'Dark Brown')], 
+                                                max_length=50, unique=True)),
             ],
         ),
         migrations.CreateModel(
