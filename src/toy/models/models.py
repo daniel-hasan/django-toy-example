@@ -6,14 +6,23 @@ from django.db import models
 #to automaticaly insert the colors in database, we need to create a fixtures file (see fixtures folder)
 #and create a migrate script (see migration folder)
 class EyeColor(models.Model):
-    AMBER = "Amber"
-    HAZEL = "Hazel"
-    BLUE = "Blue"
-    GREEN = "Green"
-    BROWN = "Brown"
-    DARK_BROWN = "Dark Brown"
+    AMBER = "amber"
+    HAZEL = "hazel"
+    BLUE = "blue"
+    GREEN = "green"
+    BROWN = "brown"
+    DARK_BROWN = "dark-brown"
 
-    color_name = models.CharField(max_length=50)
+    EYE_CHOICES = [
+        (AMBER, "Amber"),
+        (HAZEL, "Hazel"),
+        (BLUE, "Blue"),
+        (GREEN, "Green"),
+        (BROWN, "Brown"),
+        (DARK_BROWN, "Dark Brown")
+    ]
+
+    color_name = models.CharField(max_length=50, choices=EYE_CHOICES, unique=True)
     #useful for printing tests
     def __str__(self) -> str:
         return f"Eye color: {self.color_name}"

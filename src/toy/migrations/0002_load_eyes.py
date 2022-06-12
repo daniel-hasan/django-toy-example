@@ -2,18 +2,20 @@ from django.db import migrations
 from django.core.management import call_command
 
 
-def forwards_func(apps, schema_editor):
-    call_command('loaddata', '../fixtures/eye_color.json', verbosity=2)
-
-
-def reverse_func(apps, schema_editor):
-    pass
-
+def add_eyes(apps, schema_editor):
+    # Não é possivel importar a classe Pssoa diretamente já que a versão atual
+    # pode ser mais nova que o migration necessitaria. 
+    EyeColor = apps.get_model('toy', 'EyeColor')
+    for eye,eye_human_read in EyeColor.color_name.field.choices:
+        EyeColor.objects.create(color_name=eye)
 
 class Migration(migrations.Migration):
+
     dependencies = [
+        #ele deve ser executado após o 0001_initial
         ('toy', '0001_initial'),
     ]
+
     operations = [
-        migrations.RunPython(forwards_func, reverse_func, elidable=False)
+        migrations.RunPython(add_eyes),
     ]

@@ -163,16 +163,9 @@ def add_eyes(apps, schema_editor):
     # Não é possivel importar a classe Pssoa diretamente já que a versão atual
     # pode ser mais nova que o migration necessitaria. 
     EyeColor = apps.get_model('toy', 'EyeColor')
-    EyeColor.objects.bulk_create(
-            [
-                EyeColor(color_name=EyeColor.AMBER),
-                EyeColor(color_name=EyeColor.HAZEL),
-                EyeColor(color_name=EyeColor.BLUE),
-                EyeColor(color_name=EyeColor.GREEN),
-                EyeColor(color_name=EyeColor.BROWN),
-                EyeColor(color_name=EyeColor.DARK_BROWN),
-            ]
-        )
+    for eye_color, eye_color_human_read in EyeColor.color_name.field.choices:
+        EyeColor.objects.create(color_name=eye_color)
+
 
 class Migration(migrations.Migration):
 
@@ -182,7 +175,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(combine_names),
+        migrations.RunPython(add_eyes),
     ]
 ```
 
