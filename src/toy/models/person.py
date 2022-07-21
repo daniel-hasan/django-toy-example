@@ -35,7 +35,7 @@ class PersonManager(models.Manager):
 class Person(models.Model):
     name = models.CharField(max_length=200)
     eye_color = models.ForeignKey(EyeColor, on_delete=models.CASCADE)
-    birth_date = models.DateField()
+    birth_date = models.DateField(null=True)
 
 
     #We can create our own methods when calling Person.objects by overriding "objects"
@@ -46,7 +46,7 @@ class Person(models.Model):
         return relativedelta(datetime.now(),self.birth_date).years
     #useful for printing tests
     def __str__(self) -> str:
-        return f"Name: {self.name} birth: {self.birth_date} {self.eye_color}"
+        return f"Name: {self.name} birth: {self.birth_date}"
 
     def __repr__(self) -> str:
         return str(self)

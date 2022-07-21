@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+  <h1>Salvar Dados </h1>
+  <form method="post">
+    <nav>
+      <input value="Listar" type="submit" formaction="{% url "salvar_dados" "home" %}">
+      <input value="Dados" type="submit"  formaction="{% url "salvar_dados" "editar_dados" %}">
+      <input value="Cor do Olho" type="submit" formaction="{% url "salvar_dados" "cor_do_olho" %}">
+    </nav>
+    {% csrf_token %}
+    <input type="text" name="name" value="{{ person.name }}">
+    <input type="date" name="birth_date" value="{{ person.birth_date|date:"Y-m-d" }}">
+    <input type="hidden" value="{{ person.id }}" name="person_id">
+    <input value="Salvar e Listar Pessoas" type="submit" formaction="{% url "salvar_dados" "home" %}"> 
+  </form>
+{% endblock %}

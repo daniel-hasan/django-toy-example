@@ -17,5 +17,10 @@
 - Funcionamento do Migrations 
 - Base de dados de desenvolvimento *
 - Testes automatizados *
-
 \* ainda falta fazer
+
+[Django Views](docs/django_views.md)
+
+- GET vs POST
+- Redirecionamentos
+- Formas de salvar o conteúdo

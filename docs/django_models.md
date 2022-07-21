@@ -1,4 +1,4 @@
-Antes de ler essa parte, sugerimos, assistir a video-aula de DJango Models (mesmo se já assistiu). Assim, você poderá entender melhor cada ponto mencionado aqui aqui. Vamos apresentar aqui o código implementado neste repositório como exemplo.
+Antes de ler essa parte, sugerimos, assistir a [video-aula de DJango Models](https://www.youtube.com/watch?v=--1KwDBqhN8&list=PLwIaU1DGYV6skjkahOKtpgs9bPXlrVrIp&index=11) (mesmo se já assistiu) os [slides estão aqui](https://daniel-hasan.github.io/cefet-web-grad/classes/python3). Assim, você poderá entender melhor cada ponto mencionado aqui aqui. Vamos apresentar aqui o código implementado neste repositório como exemplo.
 
 Este exemplo simples possui a classe Pessoa no arquivo  `[person.py](../src/models/person.py)`, junto com suas funcionalidades na classe `PersonManager` e, além disso, a classe EyeColor, no arquivo [`models.py`]((../src/models/models.py)) para definir o olho da pessoa. Como o olho da pessoa é uma quantidade já sabida e inserida pelo sistema (e não pelo usuário) chamamos ela de tabela do sistema. No presente guia, vamos explicar as decisões que tomamos para implementar essas duas classes. 
 

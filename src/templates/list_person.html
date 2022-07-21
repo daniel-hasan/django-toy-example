@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <h1>Pessoas </h1>
+  <section id="tesouros">
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="name">
+      <input type="date" name="birth_date">
+      <input type="submit">
+    </form>
+
+    <table>
+      <caption>{{ mensagem_bonitinha }}</caption>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Nascimento</th>
+          <th>Olhos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pessoa in lista_pessoas %}
+        <tr>
+          <td>{{ pessoa.name }}</td>
+          <td>{{ pessoa.birth_date }}</td>
+          <td>{{ pessoa.eye_color.color_name  }}</td>
+
+          <td><a href="{% url "editar_dados" pessoa.id %}"><img src="{% static 'imgs/edit.png' %}" alt="Editar"></a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      
+    </table>
+    
+  </section>
+{% endblock %}
