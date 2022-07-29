@@ -37,9 +37,11 @@ class Person(models.Model):
     eye_color = models.ForeignKey(EyeColor, on_delete=models.CASCADE)
     birth_date = models.DateField(null=True)
 
-
     #We can create our own methods when calling Person.objects by overriding "objects"
     objects = PersonManager()
+
+    def getDate(self):
+        return self.birth_date
 
     @property
     def age(self):

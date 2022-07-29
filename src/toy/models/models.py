@@ -23,6 +23,7 @@ class EyeColor(models.Model):
     ]
 
     color_name = models.CharField(max_length=50, choices=EYE_CHOICES, unique=True)
+
     #useful for printing tests
     def __str__(self) -> str:
         return f"Eye color: {self.color_name}"
