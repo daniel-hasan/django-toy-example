@@ -11,7 +11,8 @@
       <input value="Cor do Olho" type="submit" formaction="{% url "salvar_dados" "cor_do_olho" %}">
     </nav>
     {% csrf_token %}
-    {{ form }}
+    <input type="text" name="name" value="{{ person.name }}">
+    <input type="date" name="birth_date" value="{{ person.birth_date|date:"Y-m-d" }}">
     <input type="hidden" value="{{ person.id }}" name="person_id">
     <input value="Salvar e Listar Pessoas" type="submit" formaction="{% url "salvar_dados" "home" %}"> 
   </form>

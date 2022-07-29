@@ -13,8 +13,16 @@
   </nav>
     {% csrf_token %}
     
-    {{form}}
+    {% for cor_do_olho in eye_colors %}
+      <label>
+      <input type="radio" name="eye_color" 
+            {% if cor_do_olho.id == person.eye_color.id %}
+              checked
+            {% endif%}
+            value="{{ cor_do_olho.id }}"> {{ cor_do_olho.color_name}}
+      </label>
 
+    {% endfor %}
     <input type="hidden" value="{{ person.id }}" name="person_id">
     <input value="Salvar e Listar Pessoas" type="submit" formaction="{% url "salvar_olho" "home" %}"> 
   </form>
