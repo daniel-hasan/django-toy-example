@@ -10,7 +10,9 @@ Iremos continuar com o exermplo da classe pessoa, agora fazendo as telas de visu
 
 # GET vs POST
 
-Na web, temos várias requisições que o navegador irá fazer para o servidor. As duas mais usuario são GET e POST. A requisição GET envia apenas a URL e, dentro dela, algum dado necessário. Por exemplo, a URL abaixo requisita a busca do termo `cenourinha` no Google: 
+Na web, temos várias requisições que o navegador irá fazer para o servidor. Nelas, além da localização da página Web são enviados dados da sessão alguns dados da própria aplicação Web. As duas maneiras mais usuais para realizar isso são as requisições GET e POST. 
+
+A requisição GET envia apenas a URL e, dentro dela, algum dado necessário. Por exemplo, a URL abaixo requisita a busca do termo `cenourinha` no Google: 
 
 ```
 https://www.google.com/search?q=cenourinha
@@ -18,14 +20,14 @@ https://www.google.com/search?q=cenourinha
 
 Essa URL pode ser criada via HTML por meio do seguinte formulário: 
 ```html
-<form action="https://google.com">
+<form action="https://google.com/search">
     <input type="text" name="q">
     <input type="submit">
 </form>
 ```
-Em que o `name` define o nome da variável que possuirá o dado da consulta. 
+Em que o `name` define o nome da variável que possuirá o dado da consulta.  Ao clicar no botão de submit, você será redirecionado a página `google.com/search` e a variável `q` possuirá o valor que o usuario preencheu. 
 
-A URL não é sempre a forma mais recomendável de requisitar dados: campos como senha devem ser enviados de forma criptografada e, além disso, a URL começa a ficar ilegivel - de dificil navegabilidade pelo usuário. Dessa forma, podemos enviar os dados de uma requisição via POST. Na requisição via POST os dados são enviados na própria requisição - não é visivel na URL. Além disso, pode ser criptografado. Vamos mostrar esse exemplo para adicionar elementos da nossa classe pessoa. 
+A URL não é sempre a forma mais recomendável de requisitar dados: campos como senha devem ser enviados de forma criptografada e, além disso, a URL começa a ficar ilegivel e de dificil navegabilidade pelo usuário. Dessa forma, podemos enviar os dados de uma requisição via POST. Na requisição via POST os dados são enviados como um campo na própria requisição - não é visivel na URL. Além disso, pode ser criptografado. Vamos mostrar esse exemplo para adicionar elementos da nossa classe pessoa. 
 
 Iremos utilizar com os seguintes arquivos: 
 
