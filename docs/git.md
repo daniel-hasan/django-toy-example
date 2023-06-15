@@ -31,10 +31,12 @@ Nas próximas seções, iremos explicar como fazer isso usando Git e o Bitbucket
 Assumindo que nossa brach inicial seja a master, precisamos sempre de: 
 
 1. Iniciar uma nova funcionalidade criando uma nova branch a partir do master
-2. Frequentemente, enviarmos nossas modificações para o repositorio remoto de nossa branch. Isso é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
-3. Caso estivermos trabalhando com outro colega na mesma branch, também frequentemente, obtemos as alterações do branch que estamos desenvolvendo
-4. Enviamos nossa funcionalidade para o master
+2. Frequentemente, enviarmos e obtemos modificações no branch que estamos desenvolvendo: 
+     a. O envio é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
+     b. Caso estivermos trabalhando com outro colega na mesma branch, também é necessario obter as alterações do branch que estamos desenvolvendo de tempos em tempos
+5. Enviamos nossa funcionalidade para o master
 
+As proximas seções apresentam tais passos.
 
 
 
@@ -90,7 +92,7 @@ git merge master
   - Caso haja conflito, corrija-os. Veja a seção que fala sobre [solução de conflitos](#markdown-header-solucao-de-conflitos)
 
 
-## Finalizando funcionalidade - Enviando-as ao branch de desenvolvimento
+# Finalizando funcionalidade - Enviando-as ao branch de desenvolvimento
 
 - Antes de começar, [obtenha as atualizações do branch de desenvolvimento](#markdown-header-obtendo-atualizacao-do-branch-de-desenvolvimento-em-seu-branch) (ver seção anterior)
 - Ainda em seu branch, caso tenha alterações no repositório local que não estão no repositório remoto, [envie tais alterações](#markdown-header-enviando-e-obtendo-alteracoes-em-seu-branch):
