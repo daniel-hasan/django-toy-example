@@ -12,9 +12,9 @@ Comandos mais usados
 
 # Conceito de Branches 
 
-Branches significa ramificações. Em desenvolvimento, fazemos isso principalmente para preservar um código que já está funcionando e escrevermos outro.  Por exemplo, abaixo, você pode dever o branch de desenvolvimento e um usuário decidiu criar uma nova funcionalidade. Ele cria um novo branch chamado `alpha` a partir do branch de `desenvolvimento`, logo após, é criado também o branch `beta`. 
+Branches significa ramificações. Em desenvolvimento, fazemos isso principalmente para preservar um código que já está funcionando e escrevermos outro.  Por exemplo, você pode dever o branch de desenvolvimento e um usuário decidiu criar uma nova funcionalidade. Ele cria um novo branch chamado `alpha` a partir do branch de `desenvolvimento`, logo após, é criado também o branch `beta`. 
 
-Um branch começa com a cópia exata do repositório do brach de origem `desenvolvimento` logo após, várias modificações são realizadas no branch `alpha` sem afetar o branch de `desenvolvimento` (os pontos na figura são as modificações). Isso é importante para garantirmos que o branch de `desenvolvimento` esteja sempre funcional enquanto estamos fazendo alterções em nossos códigos. Na figura acima, veja que o branch `alpha`  fez algumas modificações no código em varios instantes, podendo até criar bugs, porém o branch `beta` pode iniciar por meio de um código livre de bugs.  
+Um branch começa com a cópia exata do repositório do brach de origem `desenvolvimento` logo após, várias modificações são realizadas no branch `alpha` sem afetar o branch de `desenvolvimento` (os pontos na figura são as modificações). Isso é importante para garantirmos que o branch de `desenvolvimento` esteja sempre funcional enquanto estamos fazendo alterções em nossos códigos. Na figura acima, veja que o branch `alpha`  fez algumas modificações no código em varios instantes, podendo até criar bugs, porém o branch `beta` pode iniciar por meio de um código livre de bugs. Veja aqui um video explicativo das branches.
 
 Para finalizar um branch e enviarmos ao desenvolvimento: 
 
@@ -26,6 +26,17 @@ Para finalizar um branch e enviarmos ao desenvolvimento:
 2. Logo após, fazemos um `merge` **do** branch `alpha` **para o branch** de `desenvolvimento`. 
 
 Nas próximas seções, iremos explicar como fazer isso usando Git e o Bitbucket. **Aqui nosso branch de desenvolvimento chamará master**
+
+# Ciclo de uma nova funcionalidade
+Assumindo que nossa brach inicial seja a master, precisamos sempre de: 
+
+1. Iniciar uma nova funcionalidade criando uma nova branch a partir do master
+2. Frequentemente, enviarmos nossas modificações para o repositorio remoto de nossa branch. Isso é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
+3. Caso estivermos trabalhando com outro colega na mesma branch, também frequentemente, obtemos as alterações do branch que estamos desenvolvendo
+4. Enviamos nossa funcionalidade para o master
+
+
+
 
 # Início de uma nova funcionalidade
 
