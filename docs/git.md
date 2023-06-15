@@ -10,11 +10,11 @@ Comandos mais usados
 - `git checkout nome-da-branch`: vai para uma determinada branch
 
 
-# Conceito de Branches 
+# Conceito e uso de Branches 
 
 Branches significa ramificações. Em desenvolvimento, fazemos isso principalmente para preservar um código que já está funcionando e escrevermos outro.  Por exemplo, você pode dever o branch de desenvolvimento e um usuário decidiu criar uma nova funcionalidade. Ele cria um novo branch chamado `alpha` a partir do branch de `desenvolvimento`, logo após, é criado também o branch `beta`. 
 
-Um branch começa com a cópia exata do repositório do brach de origem `desenvolvimento` logo após, várias modificações são realizadas no branch `alpha` sem afetar o branch de `desenvolvimento` (os pontos na figura são as modificações). Isso é importante para garantirmos que o branch de `desenvolvimento` esteja sempre funcional enquanto estamos fazendo alterções em nossos códigos. Na figura acima, veja que o branch `alpha`  fez algumas modificações no código em varios instantes, podendo até criar bugs, porém o branch `beta` pode iniciar por meio de um código livre de bugs. Veja aqui um video explicativo das branches.
+Um branch começa com a cópia exata do repositório do brach de origem `desenvolvimento` logo após, várias modificações são realizadas no branch `alpha` sem afetar o branch de `desenvolvimento` (os pontos na figura são as modificações). Isso é importante para garantirmos que o branch de `desenvolvimento` esteja sempre funcional enquanto estamos fazendo alterções em nossos códigos. [Veja aqui um vídeo exemplo](https://photos.app.goo.gl/aYrDNVrNj6neV6MVA).
 
 Para finalizar um branch e enviarmos ao desenvolvimento: 
 
@@ -31,11 +31,14 @@ Nas próximas seções, iremos explicar como fazer isso usando Git e o Bitbucket
 Assumindo que nossa brach inicial seja a master, precisamos sempre de: 
 
 1. [Iniciar uma nova funcionalidade](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#in%C3%ADcio-de-uma-nova-funcionalidade) criando uma nova branch a partir do master
-2. Frequentemente, [enviarmos e obtemos modificações no branch](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#enviando-e-obtendo-altera%C3%A7%C3%B5es-do-reposit%C3%B3rio-remoto-em-seu-branch) que estamos desenvolvendo além de obter as modificações de desenvolvimento: 
-     a. O envio é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
-     b. Caso estivermos trabalhando com outro colega na mesma branch, também é necessario obter as alterações do branch que estamos desenvolvendo de tempos em tempos
-     c. Para diminuir a chance de conflitos de edição e bugs ao enviar a nossa funcionalidade para a master é importante frequentement obter as atualizações de desenvolvimento.
-5. Enviamos nossa funcionalidade para o master
+2. Frequentemente, [enviarmos e obtemos modificações no branch](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#enviando-e-obtendo-altera%C3%A7%C3%B5es-do-reposit%C3%B3rio-remoto-em-seu-branch) que estamos desenvolvendo além de obter as modificações de desenvolvimento:
+ 
+     a. [O envio](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#enviando-altera%C3%A7%C3%B5es) é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
+     
+     b. Caso estivermos trabalhando com outro colega na mesma branch, também é necessario [obter as alterações do branch](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#obtendo-altera%C3%A7%C3%B5es) que estamos desenvolvendo de tempos em tempos
+     
+     c. Para diminuir a chance de conflitos de edição e bugs ao enviar a nossa funcionalidade para a master é importante frequentement [obter as atualizações do branch master](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#obtendo-atualiza%C3%A7%C3%A3o-do-branch-de-desenvolvimento-em-seu-branch).
+5. Por fim, [enviamos nossa funcionalidade para o master](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#finalizando-funcionalidade---enviando-as-ao-branch-de-desenvolvimento)
 
 As proximas seções apresentam tais passos.
 
