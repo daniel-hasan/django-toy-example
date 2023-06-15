@@ -30,10 +30,11 @@ Nas próximas seções, iremos explicar como fazer isso usando Git e o Bitbucket
 # Ciclo de uma nova funcionalidade
 Assumindo que nossa brach inicial seja a master, precisamos sempre de: 
 
-1. Iniciar uma nova funcionalidade criando uma nova branch a partir do master
-2. Frequentemente, enviarmos e obtemos modificações no branch que estamos desenvolvendo: 
+1. [Iniciar uma nova funcionalidade](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#in%C3%ADcio-de-uma-nova-funcionalidade) criando uma nova branch a partir do master
+2. Frequentemente, [enviarmos e obtemos modificações no branch](https://github.com/daniel-hasan/django-toy-example/blob/master/docs/git.md#enviando-e-obtendo-altera%C3%A7%C3%B5es-do-reposit%C3%B3rio-remoto-em-seu-branch) que estamos desenvolvendo além de obter as modificações de desenvolvimento: 
      a. O envio é importante tanto como backup quanto se houver mais de uma pessoa trabalhando na msma branch. Outro fator importante é que, se nossos testes automatizzados já stiverem configurados ao dar commit, saberemos se as nossas modificações geraram algum bug com mais antecedecia.
      b. Caso estivermos trabalhando com outro colega na mesma branch, também é necessario obter as alterações do branch que estamos desenvolvendo de tempos em tempos
+     c. Para diminuir a chance de conflitos de edição e bugs ao enviar a nossa funcionalidade para a master é importante frequentement obter as atualizações de desenvolvimento.
 5. Enviamos nossa funcionalidade para o master
 
 As proximas seções apresentam tais passos.
